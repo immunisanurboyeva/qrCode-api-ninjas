@@ -4,11 +4,8 @@ const image = document.querySelector('img')
 
 let randomNum = getRandomInt(10000000000000, 1000000000000000)
 input.value = randomNum
-
 form.addEventListener('submit', (e)=>{
     e.preventDefault()
-
-
     barCode(input.value)
 })
 
@@ -30,7 +27,6 @@ async function barCode(text){
     image.src = imgUrl
     image.style.borderColor = "#6bff97c7"
 }
-
 
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
